@@ -1,36 +1,34 @@
-import Userprofile from './Components/UserProfile/index'
+import Bannerdata from './components/BannerCardItem'
 
-const userdetailslist = [
+import './App.css'
+
+const bannerCardsList = [
   {
-    uniqueid: 1,
-    imageurl: 'https://assets.ccbp.in/frontend/react-js/floyd-miles-img.png',
-    name: 'tony',
-    role: 'software',
+    id: 1,
+    headerText: 'The Seasons Latest',
+    description: 'Get the seasons all latest designs in a flick of your hand',
+    className: 'card-1',
   },
   {
-    uniqueid: 2,
-    imageurl: 'https://assets.ccbp.in/frontend/react-js/floyd-miles-img.png',
-    name: 'tony_2',
-    role: 'software',
+    id: 2,
+    headerText: 'Our New Designs',
+    description:
+      'Get the designs developed by our in-house team all for yourself',
+    className: 'card-2',
   },
   {
-    uniqueid: 3,
-    imageurl: 'https://assets.ccbp.in/frontend/react-js/floyd-miles-img.png',
-    name: 'tony_2',
-    role: 'software',
+    id: 3,
+    headerText: 'Insiders',
+    description: 'Get the top class products for yourself with an extra off',
+    className: 'card-3',
   },
 ]
 
 const App = () => (
-  <ul className="list-container">
-    <div className="title">
-      <h1>userslist</h1>
-      <ul>
-        {userdetailslist.map(eachitem => (
-          <Userprofile userdetails={eachitem} key={eachitem.uniqueid} />
-        ))}
-      </ul>
-    </div>
+  <ul>
+    {bannerCardsList.map(eachitem => (
+      <Bannerdata banneritems={eachitem} key={eachitem.id} />
+    ))}
   </ul>
 )
 
