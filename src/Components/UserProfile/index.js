@@ -1,17 +1,18 @@
 import './index.css'
 
-const Userprofile = props => {
-  const {userdetails} = props
-  const {imageurl, name, role} = userdetails
+const Bannerdata = props => {
+  const {banneritems} = props
+  const {headerText, description, className} = banneritems
   return (
-    <li className="user-card-container">
-      <img src={imageurl} className="avatar" alt="avatar" />
-      <div className="user-details-container">
-        <h1 className="user-name">{name}</h1>
-        <p className="user-designation">{role}</p>
+    <li className={className}>
+      <div>
+        <h1>{headerText}</h1>
+        <p>{description}</p>
+        <button type="button">Show more</button>
       </div>
     </li>
   )
 }
 
-export default Userprofile
+export default Bannerdata
+
